@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Mail\Websitemail;
 
 class AdminLoginController extends Controller
 {
     public function index()
     {
-
+     
         return view('admin.login');
     }
     public function forget_password()
@@ -22,8 +22,21 @@ class AdminLoginController extends Controller
 
     public function login_submit(Request $request)
     {
-        $request->validation([
-            'email' => 'required|email'
+        $request->validate([
+            'email' => 'required|email',
+            'password'=>'required',
+           
         ]);
+
+        $credential = [
+            'email' => $request->email,
+            'password' => $request->password
+            
+        ];
+        if(Auth::guard('admin')->attempt($credential)) {
+            return redirect()->route('admin_home');
+        }else{
+            return redirect()->route('admin_login')->with('error', 'Your password is wrong! Please try again');
+        }
     }
 }
