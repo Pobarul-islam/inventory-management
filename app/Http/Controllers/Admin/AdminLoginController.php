@@ -39,4 +39,11 @@ class AdminLoginController extends Controller
             return redirect()->route('admin_login')->with('error', 'Your password is wrong! Please try again');
         }
     }
+
+
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect()->route('admin_login');
+    }
 }
