@@ -77,7 +77,7 @@
         <script>
             iziToast.success({
                 title: '',
-                position: 'center',
+                position: 'topRight',
                 message: '{{ session()->get('success') }}',
             });
         </script>

@@ -17,7 +17,7 @@
                             <div class="d-sm-none d-lg-inline-block">{{  Auth::guard('admin')->user()->name }}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="profile.html" class="dropdown-item has-icon">
+                            <a href="{{ route('admin_profile') }}" class="dropdown-item has-icon">
                                 <i class="far fa-user"></i> Edit Profile
                             </a>
                             <a href="{{ route('admin_logout') }}" class="dropdown-item has-icon text-danger">

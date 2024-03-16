@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminProfileController extends Controller
 {
@@ -26,6 +28,10 @@ class AdminProfileController extends Controller
                 'retype_password' => 'required|same:password'
             ]);
         }
-        echo $request->name;
+        $admin_data = Admin::where('email', Auth::guard('admin')->user()->email)->first();
+        $admin_data->name = $request->name;
+        $admin_data->email = $request->email;
+        $admin_data->update();
+        return redirect()->back()->with('success', 'profile updated successfully');
     }
 }
