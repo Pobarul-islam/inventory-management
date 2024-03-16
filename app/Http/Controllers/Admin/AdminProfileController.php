@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminProfileController extends Controller
 {
@@ -17,6 +18,8 @@ class AdminProfileController extends Controller
 
     public function profile_submit(Request $request)
     {
+        $admin_data = Admin::where('email', Auth::guard('admin')->user()->email)->first();
+
         $request->validate([
             'name' => 'required',
             'email' => 'required|email'
@@ -27,8 +30,12 @@ class AdminProfileController extends Controller
                 'password' => 'required',
                 'retype_password' => 'required|same:password'
             ]);
+
+            $admin_data->password = Hash::make($request->password);
         }
-        $admin_data = Admin::where('email', Auth::guard('admin')->user()->email)->first();
+
+
+
         $admin_data->name = $request->name;
         $admin_data->email = $request->email;
         $admin_data->update();
