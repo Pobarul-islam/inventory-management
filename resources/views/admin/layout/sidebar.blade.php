@@ -10,7 +10,7 @@
          <ul class="sidebar-menu">
 
              <li class="active"><a class="nav-link" href="{{ route('admin_home') }}" data-bs-toggle="tooltip"
-                     data-bs-placement="right"   data-bs-title="Dashboard">
+                     data-bs-placement="right" data-bs-title="Dashboard">
 
                      <i class="fas fa-hand-point-right"></i>
                      <span>Dashboard</span></a></li>
@@ -27,20 +27,20 @@
                  </ul>
              </li>
 
-             <li class=""><a class="nav-link" href="setting.html "><i class="fas fa-hand-point-right" data-bs-toggle="tooltip"
-                     data-bs-placement="right"   data-bs-title="Settings"></i>
+             <li class=""><a class="nav-link" href="setting.html "><i class="fas fa-hand-point-right"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Settings"></i>
                      <span>Settings</span></a></li>
 
-             <li class=""><a class="nav-link" href="form.html"><i class="fas fa-hand-point-right" data-bs-toggle="tooltip"
-                     data-bs-placement="right"   data-bs-title="Form"></i>
+             <li class=""><a class="nav-link" href="form.html"><i class="fas fa-hand-point-right"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Form"></i>
                      <span>Form</span></a></li>
 
-             <li class=""><a class="nav-link" href="table.html"><i class="fas fa-hand-point-right" data-bs-toggle="tooltip"
-                     data-bs-placement="right"   data-bs-title="Table"></i>
+             <li class=""><a class="nav-link" href="table.html"><i class="fas fa-hand-point-right"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Table"></i>
                      <span>Table</span></a></li>
 
-             <li class=""><a class="nav-link" href="invoice.html"><i class="fas fa-hand-point-right" data-bs-toggle="tooltip"
-                     data-bs-placement="right"   data-bs-title="Invoice"></i>
+             <li class=""><a class="nav-link" href="invoice.html"><i class="fas fa-hand-point-right"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Invoice"></i>
                      <span>Invoice</span></a></li>
 
          </ul>

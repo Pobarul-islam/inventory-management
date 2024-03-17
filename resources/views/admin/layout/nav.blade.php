@@ -22,8 +22,8 @@
             <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="{{ route('admin_profile') }}"> <i class="far fa-user"></i> Edit
                         Profile</a></li>
-                <li><a class="dropdown-item" href="{{ route('admin_logout') }}"> <i class="far fa-user"></i> Edit
-                        Profile</a></li>
+                <li><a class="dropdown-item" href="{{ route('admin_logout') }}"> <i class="far fa-user"></i> Logout
+                    </a></li>
 
             </ul>
 
