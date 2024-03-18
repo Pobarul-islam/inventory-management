@@ -1,79 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Personal Portfolio Website</title>
-
-    <link rel="stylesheet" href="{{ asset('dist_front/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist_front/css/all.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist_front/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist_front/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist_front/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist_front/css/custom.css') }}">
-
-    <link rel="icon" type="image/png" href="{{ asset('dist_front/images/man.png') }}">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-    <div id="preloader">
-        <div id="preloader_inner"></div>
-    </div>
-
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <a class="navbar-brand logo" href="index.html">
-                My<span>Website</span>
-                <!-- <img src="images/logo.png" alt=""> -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="service.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+@extends('front.layout.app')
 
 
-    <div class="home-banner">
+@section('main_content')
+
+ <div class="home-banner">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
@@ -472,7 +402,8 @@
                         <div class="filter-item web_design">
                             <div class="inner">
                                 <div class="photo"><a href="portfolio-detail.html"><img
-                                            src="{{ asset('dist_front/images/design_3.jpg') }}" alt=""></a></div>
+                                            src="{{ asset('dist_front/images/design_3.jpg') }}" alt=""></a>
+                                </div>
                                 <div class="text">
                                     <h2>Design Project 3</h2>
                                 </div>
@@ -481,7 +412,8 @@
                         <div class="filter-item web_development">
                             <div class="inner">
                                 <div class="photo"><a href="portfolio-detail.html"><img
-                                            src="{{asset('dist_front/images/development_3.jpg')}}" alt=""></a></div>
+                                            src="{{ asset('dist_front/images/development_3.jpg') }}"
+                                            alt=""></a></div>
                                 <div class="text">
                                     <h2>Development Project 3</h2>
                                 </div>
@@ -489,7 +421,8 @@
                         </div>
                         <div class="filter-item digital_marketing">
                             <div class="inner">
-                                <div class="photo"><a href="portfolio-detail.html"><img src="{{asset('dist_front/images/marketing_3.jpg')}}"
+                                <div class="photo"><a href="portfolio-detail.html"><img
+                                            src="{{ asset('dist_front/images/marketing_3.jpg') }}"
                                             alt=""></a></div>
                                 <div class="text">
                                     <h2>Marketing Project 3</h2>
@@ -514,7 +447,7 @@
                     <div class="owl-carousel owl-theme testimonial-carousel">
                         <div class="item">
                             <div class="photo d-flex justify-content-center">
-                                <img src="{{asset('dist_front/images/t1.jpg')}}" alt="">
+                                <img src="{{ asset('dist_front/images/t1.jpg') }}" alt="">
                             </div>
                             <div class="comment">
                                 Ad sea commodo tincidunt. Perfecto pericula ut eum, ei usu fugit utroque qualisque. Ius
@@ -528,7 +461,7 @@
                         </div>
                         <div class="item">
                             <div class="photo d-flex justify-content-center">
-                                <img src="{{asset('dist_front/images/t2.jpg')}}" alt="">
+                                <img src="{{ asset('dist_front/images/t2.jpg') }}" alt="">
                             </div>
                             <div class="comment">
                                 Minim scriptorem eos te, debet habemus laboramus usu te. Ei mel alia graeco melius, ius
@@ -542,7 +475,7 @@
                         </div>
                         <div class="item">
                             <div class="photo d-flex justify-content-center">
-                                <img src="{{asset('dist_front/images/t3.jpg')}}" alt="">
+                                <img src="{{ asset('dist_front/images/t3.jpg') }}" alt="">
                             </div>
                             <div class="comment">
                                 Vis summo suscipit splendide ne, ad augue consul impetus vel. Et qui inani utroque
@@ -570,7 +503,7 @@
                 <div class="col-md-4 wow fadeInUp">
                     <div class="item">
                         <div class="photo">
-                            <img src="{{asset('dist_front/images/post-1.jpg')}}" alt="">
+                            <img src="{{ asset('dist_front/images/post-1.jpg') }}" alt="">
                         </div>
                         <div class="text">
                             <h3>Blog Post Title</h3>
@@ -588,7 +521,7 @@
                 <div class="col-md-4 wow fadeInUp">
                     <div class="item">
                         <div class="photo">
-                            <img src="{{asset('dist_front/images/post-2.jpg')}}" alt="">
+                            <img src="{{ asset('dist_front/images/post-2.jpg') }}" alt="">
                         </div>
                         <div class="text">
                             <h3>Blog Post Title</h3>
@@ -606,7 +539,7 @@
                 <div class="col-md-4 wow fadeInUp">
                     <div class="item">
                         <div class="photo">
-                            <img src="{{asset('dist_front/images/post-3.jpg')}}" alt="">
+                            <img src="{{ asset('dist_front/images/post-3.jpg') }}" alt="">
                         </div>
                         <div class="text">
                             <h3>Blog Post Title</h3>
@@ -635,40 +568,40 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme client-carousel">
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('dist_front/images/client.png')}}" alt="">
+                            <img src="{{ asset('dist_front/images/client.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -676,48 +609,4 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="logo d-flex justify-content-center">
-                        <img src="images/footer-logo.png" alt="">
-                    </div>
-                    <div class="description">
-                        Cum an oratio fierent detraxit, per in novum aliquando. Vel ei aeque appellantur. Ne deserunt
-                        adipisci sed, sed ex veniam accusam, usu ut nonumy admodum recteque.
-                    </div>
-                    <div class="social">
-                        <ul>
-                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright">
-                        Copright 2022, company name. All Rights Reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <a href="" class="scrollup">
-        <i class="fas fa-chevron-up"></i>
-    </a>
-
-
-    <script src="{{asset('dist_front/js/jquery-3.6.1.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/popper.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/jquery.waypoints.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/counterup.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/filter.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/wow.min.js')}}"></script>
-    <script src="{{asset('dist_front/js/custom.js')}}"></script>
-
-</body>
-
-</html>
+@endsection
