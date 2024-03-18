@@ -3,12 +3,21 @@
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
     return view('front.home');
 });
+
+// Frontend 
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+
 
 
 // Admin 
