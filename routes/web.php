@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminHomePageController;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Front\AboutController;
@@ -44,3 +45,5 @@ Route::get('/admin/edit-profile', [AdminProfileController::class, 'index'])->nam
 
 
 Route::post('/admin/edit-profile-submit', [AdminProfileController::class, 'profile_submit'])->name('admin_profile_submit');
+
+Route::get('/admin/home-banner', [AdminHomePageController::class, 'index'])->name('admin_home_banner')->middleware(('admin:admin'));
