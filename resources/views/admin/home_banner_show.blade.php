@@ -8,7 +8,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin_home_banner_submit') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-3">
@@ -28,21 +28,22 @@
                                             value="{{ $page_data->banner_person_name }}">
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">Designation *</label>
+                                        <label class="form-label">Designation</label>
                                         <input type="text" class="form-control" name="banner_person_designation" cols="30" row="10"
                                             value="{{ $page_data->banner_person_designation }}">
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">Description *</label>
-                                        <textarea name="banner_description" class="form-control h_100" value="{{ $page_data->banner_person_description }}"></textarea>
+                                        <label class="form-label">Description</label>
+                                        <input name="banner_description" class="form-control h_100" value="{{ $page_data->banner_description }}"
+                                        ></input>
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">Button url *</label>
+                                        <label class="form-label">Button url</label>
                                         <input name="banner_button_url" class="form-control" value="{{ $page_data->banner_button_url }}"></input>
                                     </div>
-                                    <div class="mb-4">
-                                        <label class="form-label">Button text *</label>
-                                        <input name="banner_button_text" class="form-control" value="{{ $page_data->banner_benner_text }}"></input>
+                                     <div class="mb-4">
+                                        <label class="form-label">Button Text</label>
+                                        <input name="banner_button_text" class="form-control" value="{{ $page_data->banner_button_text }}"></input>
                                     </div>
                                   
                                    

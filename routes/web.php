@@ -47,3 +47,5 @@ Route::get('/admin/edit-profile', [AdminProfileController::class, 'index'])->nam
 Route::post('/admin/edit-profile-submit', [AdminProfileController::class, 'profile_submit'])->name('admin_profile_submit');
 
 Route::get('/admin/home-banner', [AdminHomePageController::class, 'index'])->name('admin_home_banner')->middleware(('admin:admin'));
+
+Route::post('/admin/home-banner-submit', [AdminHomePageController::class, 'store'])->name('admin_home_banner_submit')->middleware(('admin:admin'));
